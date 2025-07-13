@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Heldorya Minecraft Server</title>
+
+<!-- Font Google: Cinzel per titoli, Lora per testo -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Lora&display=swap" rel="stylesheet" />
+
+<style>
+/* Reset e base */
+* {
+box-sizing: border-box;
+}
+body {
+margin: 0;
+background: #1b0b00;
+color: #f0e6d2;
+font-family: 'Lora', serif;
+line-height: 1.6;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+/* Header con immagine castello */
+header {
+position: relative;
+height: 450px;
+background: url('https://i.imgur.com/2rIob1Q.jpeg') center center/cover no-repeat;
+display: flex;
+align-items: center;
+justify-content: center;
+color: #ffb347;
+text-shadow: 2px 2px 8px #4b2600;
+}
+header h1 {
+font-family: 'Cinzel', serif;
+font-size: 4.5rem;
+letter-spacing: 0.15em;
+background: rgba(40, 20, 5, 0.75);
+padding: 0.7rem 2rem;
+border-radius: 12px;
+}
+
+/* Nav semplice sotto header */
+nav {
+background: #4e1c00;
+display: flex;
+justify-content: center;
+padding: 1rem 0;
+gap: 3rem;
+font-weight: 600;
+}
+nav a {
+color: #f0e6d2;
+text-decoration: none;
+font-family: 'Cinzel', serif;
+font-size: 1.1rem;
+transition: color 0.25s ease;
+}
+nav a:hover {
+color: #ffb347;
+}
+
+/* Contenuto centrale */
+main {
+max-width: 1080px;
+margin: 3rem auto 4rem;
+padding: 0 1.5rem;
+}
+
+section {
+margin-bottom: 3.8rem;
+}
+
+/* Titoli sezioni */
+section h2 {
+font-family: 'Cinzel', serif;
+font-weight: 600;
+font-size: 2.8rem;
+color: #ffb347;
+border-bottom: 3px solid #cc5200;
+padding-bottom: 0.35rem;
+margin-bottom: 1.3rem;
+}
+
+/* Intro con box scuro semi-trasparente */
+.intro-text {
+background: rgba(70, 30, 5, 0.85);
+padding: 1.5rem 2rem;
+border-radius: 10px;
+font-size: 1.22rem;
+box-shadow: 0 0 15px #aa4b00;
+}
+
+/* Regole come lista stilizzata */
+ul.rules-list {
+background: rgba(70, 30, 5, 0.85);
+padding: 1.5rem 2rem;
+border-radius: 10px;
+box-shadow: 0 0 15px #aa4b00;
+font-size: 1.1rem;
+list-style-type: square;
+margin-left: 1.2rem;
+}
+ul.rules-list li {
+margin: 0.7rem 0;
+}
+
+/* Galleria immagini */
+.gallery {
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+gap: 1.9rem;
+}
+
+.gallery figure {
+background: rgba(80, 40, 10, 0.9);
+border-radius: 14px;
+overflow: hidden;
+box-shadow: 0 0 14px #cc6300;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery figure:hover {
+transform: scale(1.07);
+box-shadow: 0 0 20px #ff9d00;
+}
+
+.gallery img {
+width: 100%;
+display: block;
+object-fit: cover;
+height: 180px;
+}
+
+.gallery figcaption {
+padding: 0.8rem 1rem;
+font-family: 'Cinzel', serif;
+font-size: 1rem;
+color: #ffb347;
+background: rgba(60, 20, 5, 0.85);
+text-align: center;
+}
+
+/* Protection section box */
+.protection-text {
+background: rgba(70, 30, 5, 0.85);
+padding: 1.6rem 2rem;
+border-radius: 10px;
+font-size: 1.15rem;
+box-shadow: 0 0 15px #aa4b00;
+max-width: 700px;
+margin: 0 auto;
+text-align: center;
+}
+
+/* Footer */
+footer {
+background: #4e1c00;
+text-align: center;
+padding: 1.3rem 1rem;
+font-family: 'Cinzel', serif;
+font-weight: 600;
+font-size: 0.95rem;
+color: #f0e6d2;
+border-top: 3px solid #cc5200;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+header h1 {
+font-size: 2.8rem;
+padding: 0.6rem 1rem;
+}
+nav {
+gap: 1.5rem;
+}
+section h2 {
+font-size: 2.2rem;
+}
+.gallery img {
+height: 140px;
+}
+}
+</style>
+
+</head>
+<body>
+
+<header>
+<h1>Heldorya Minecraft Server</h1>
+</header>
+
+<nav>
+<a href="#welcome">Welcome</a>
+<a href="#info">Info</a>
+<a href="#rules">Rules</a>
+<a href="#explore">Explore</a>
+<a href="#protection">Protection</a>
+</nav>
+
+<main>
+
+<section id="welcome" class="intro-text">
+<p>Welcome to Heldorya — a realm where legends are born and heroes unite. Begin your epic journey in the grandeur of Castello di Valdareth.</p>
+</section>
+
+<section id="info" class="intro-text">
+<p>Heldorya runs Forge 1.20.1 with exclusive mods, delivering a medieval fantasy experience rich with adventure. Contact admins to receive the modpack and step into a world of endless possibilities.</p>
+</section>
+
+<section id="rules">
+<h2>Laws of the Land</h2>
+<ul class="rules-list">
+<li>No griefing or destruction of other players’ builds.</li>
+<li>Respect all players and admins. Harassment is forbidden.</li>
+<li>Cheating, hacking, or exploits lead to instant ban.</li>
+<li>Use respectful and appropriate language at all times.</li>
+<li>Trading must be fair and honest.</li>
+<li>Do not abuse bugs or glitches.</li>
+<li>Follow instructions from events and admins without disputes.</li>
+</ul>
+</section>
+
+<section id="explore">
+<h2>Explore the World</h2>
+<p class="intro-text">Build your legacy among towering castles, lively markets, and sacred churches. Buy your home in the spawn village and become part of the kingdom’s heart.</p>
+
+<div class="gallery">
+
+<figure>
+<img src="https://i.imgur.com/2rIob1Q.jpeg" alt="Castello di Valdareth" />
+<figcaption>Castello di Valdareth - The Kingdom’s Heart</figcaption>
+</figure>
+
+<figure>
+<img src="https://i.imgur.com/9bR29sG.jpg" alt="Spawn Medieval Village" />
+<figcaption>Spawn Medieval Village</figcaption>
+</figure>
+
+<figure>
+<img src="https://i.imgur.com/kPUY2J0.jpg" alt="Tower Overlooking the Valley" />
+<figcaption>Tower Overlooking the Valley</figcaption>
+</figure>
+
+<figure>
+<img src="https://i.imgur.com/Y2pbjXD.jpg" alt="Secret Forest Entrance" />
+<figcaption>Secret Forest Entrance</figcaption>
+</figure>
+
+<figure>
+<img src="https://i.imgur.com/q3pzCT7.jpg" alt="Marketplace at Dusk" />
+<figcaption>Marketplace at Dusk</figcaption>
+</figure>
+
+<figure>
+<img src="https://i.imgur.com/4PhG4DP.jpg" alt="Medieval Hub Interior" />
+<figcaption>Medieval Hub Interior</figcaption>
+</figure>
+
+<figure>
+<img src="https://i.imgur.com/D9DxiQc.jpg" alt="Dragon's Lair" />
+<figcaption>Dragon's Lair</figcaption>
+</figure>
+
+<figure>
+<img src="https://i.imgur.com/PE27u6S.jpg" alt="Enchanted Garden" />
+<figcaption>Enchanted Garden</figcaption>
+</figure>
+
+<figure>
+<img src="https://i.imgur.com/vGZv6Sb.jpg" alt="Cobbled Stone Streets" />
+<figcaption>Cobbled Stone Streets</figcaption>
+</figure>
+
+<figure>
+<img src="https://i.imgur.com/OJrkQZk.jpg" alt="Ancient Library" />
+<figcaption>Ancient Library</figcaption>
+</figure>
+
+<figure>
+<img src="https://i.imgur.com/7GYLcah.jpg" alt="Hidden Dungeon Entrance" />
+<figcaption>Hidden Dungeon Entrance</figcaption>
+</figure>
+
+<figure>
+<img src="https://i.imgur.com/Yrl1Ycg.jpg" alt="Riverside Dock" />
+<figcaption>Riverside Dock</figcaption>
+</figure>
+
+<figure>
+<img src="https://i.imgur.com/R4RFe2n.jpg" alt="Snowy Mountain Pass" />
+<figcaption>Snowy Mountain Pass</figcaption>
+</figure>
+
+<figure>
+<img src="https://i.imgur.com/vnP6d2S.jpg" alt="Forge & Blacksmith" />
+<figcaption>Forge & Blacksmith</figcaption>
+</figure>
+
+<figure>
+<img src="https://i.imgur.com/2DxFkC1.jpg" alt="Village Festival" />
+<figcaption>Village Festival</figcaption>
+</figure>
+
+</div>
+</section>
+
+<section id="protection" class="protection-text">
+<p>Players are protected from griefing, theft, and harassment through active moderation and anti-cheat measures. Build in peace and enjoy your adventure!</p>
+</section>
+
+</main>
+
+<footer>
+&copy; 2025 Heldorya Minecraft Server — All Rights Reserved
+</footer>
+
+</body>
+</html>
