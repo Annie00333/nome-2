@@ -4,317 +4,306 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Heldorya Minecraft Server</title>
-
-<!-- Font Google: Cinzel per titoli, Lora per testo -->
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Lora&display=swap" rel="stylesheet" />
-
 <style>
-/* Reset e base */
-* {
-box-sizing: border-box;
-}
+/* Font e base colori */
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Roboto&display=swap');
+
 body {
-margin: 0;
-background: #1b0b00;
+margin: 0; padding: 0;
+font-family: 'Roboto', sans-serif;
+background: #1a0a00;
 color: #f0e6d2;
-font-family: 'Lora', serif;
 line-height: 1.6;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
 }
-
-/* Header con immagine castello */
+h1, h2, h3 {
+font-family: 'MedievalSharp', cursive;
+color: #ff6f3c;
+margin-bottom: 0.5em;
+}
+a {
+color: #ffb27f;
+text-decoration: none;
+}
+a:hover {
+text-decoration: underline;
+}
 header {
-position: relative;
-height: 450px;
-background: url('https://i.imgur.com/2rIob1Q.jpeg') center center/cover no-repeat;
-display: flex;
-align-items: center;
-justify-content: center;
-color: #ffb347;
-text-shadow: 2px 2px 8px #4b2600;
+background: #4a1e00;
+padding: 1.5rem;
+text-align: center;
+box-shadow: 0 3px 10px #7a3d00;
 }
-header h1 {
-font-family: 'Cinzel', serif;
-font-size: 4.5rem;
-letter-spacing: 0.15em;
-background: rgba(40, 20, 5, 0.75);
-padding: 0.7rem 2rem;
-border-radius: 12px;
-}
-
-/* Nav semplice sotto header */
 nav {
-background: #4e1c00;
+background: #7a3d00;
 display: flex;
 justify-content: center;
+gap: 2rem;
 padding: 1rem 0;
-gap: 3rem;
-font-weight: 600;
 }
 nav a {
-color: #f0e6d2;
-text-decoration: none;
-font-family: 'Cinzel', serif;
+font-weight: 700;
 font-size: 1.1rem;
-transition: color 0.25s ease;
+color: #ffe8c4;
 }
 nav a:hover {
-color: #ffb347;
+color: #ffdda0;
 }
-
-/* Contenuto centrale */
 main {
-max-width: 1080px;
-margin: 3rem auto 4rem;
-padding: 0 1.5rem;
+max-width: 1100px;
+margin: 2rem auto;
+padding: 0 1rem;
 }
 
+/* Sezioni */
 section {
-margin-bottom: 3.8rem;
-}
-
-/* Titoli sezioni */
-section h2 {
-font-family: 'Cinzel', serif;
-font-weight: 600;
-font-size: 2.8rem;
-color: #ffb347;
-border-bottom: 3px solid #cc5200;
-padding-bottom: 0.35rem;
-margin-bottom: 1.3rem;
-}
-
-/* Intro con box scuro semi-trasparente */
-.intro-text {
-background: rgba(70, 30, 5, 0.85);
+margin-bottom: 3rem;
+background: #2e1400cc;
 padding: 1.5rem 2rem;
-border-radius: 10px;
-font-size: 1.22rem;
-box-shadow: 0 0 15px #aa4b00;
+border-radius: 12px;
+box-shadow: 0 0 20px #7a3d00aa;
 }
 
-/* Regole come lista stilizzata */
-ul.rules-list {
-background: rgba(70, 30, 5, 0.85);
-padding: 1.5rem 2rem;
-border-radius: 10px;
-box-shadow: 0 0 15px #aa4b00;
-font-size: 1.1rem;
-list-style-type: square;
-margin-left: 1.2rem;
+/* Intro image castle */
+#castle-intro {
+text-align: center;
+margin-bottom: 2rem;
 }
-ul.rules-list li {
-margin: 0.7rem 0;
+#castle-intro img {
+max-width: 100%;
+border-radius: 15px;
+box-shadow: 0 0 25px #ff6f3caa;
 }
 
-/* Galleria immagini */
+/* Gallery */
 .gallery {
 display: grid;
 grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-gap: 1.9rem;
+gap: 1.7rem;
 }
-
 .gallery figure {
-background: rgba(80, 40, 10, 0.9);
-border-radius: 14px;
-overflow: hidden;
-box-shadow: 0 0 14px #cc6300;
-transition: transform 0.3s ease, box-shadow 0.3s ease;
+background: #451d00cc;
+padding: 0.7rem;
+border-radius: 10px;
+box-shadow: inset 0 0 10px #ffa65d55;
+transition: transform 0.3s ease;
 }
 .gallery figure:hover {
-transform: scale(1.07);
-box-shadow: 0 0 20px #ff9d00;
+transform: scale(1.05);
+box-shadow: 0 0 15px #ff9a4bcc;
 }
-
 .gallery img {
 width: 100%;
+border-radius: 8px;
 display: block;
-object-fit: cover;
-height: 180px;
+margin-bottom: 0.5rem;
 }
-
 .gallery figcaption {
-padding: 0.8rem 1rem;
-font-family: 'Cinzel', serif;
-font-size: 1rem;
-color: #ffb347;
-background: rgba(60, 20, 5, 0.85);
+font-family: 'MedievalSharp', cursive;
+font-size: 1.1rem;
 text-align: center;
+color: #ffb27f;
 }
 
-/* Protection section box */
-.protection-text {
-background: rgba(70, 30, 5, 0.85);
-padding: 1.6rem 2rem;
-border-radius: 10px;
-font-size: 1.15rem;
-box-shadow: 0 0 15px #aa4b00;
+/* Text styles */
+p.intro-text {
+font-size: 1.1rem;
+margin-bottom: 1.5rem;
+max-width: 900px;
+margin-left: auto;
+margin-right: auto;
+color: #ffb27fdd;
+}
+
+/* Rules list */
+ul.rules-list {
+list-style-type: none;
+padding-left: 0;
 max-width: 700px;
 margin: 0 auto;
-text-align: center;
+}
+ul.rules-list li {
+background: #4a1e0011;
+margin-bottom: 0.7rem;
+padding: 0.8rem 1rem;
+border-left: 5px solid #ff6f3c;
+font-weight: 600;
+font-size: 1.1rem;
 }
 
 /* Footer */
 footer {
-background: #4e1c00;
+background: #4a1e00;
+color: #ffdda0;
 text-align: center;
-padding: 1.3rem 1rem;
-font-family: 'Cinzel', serif;
-font-weight: 600;
-font-size: 0.95rem;
-color: #f0e6d2;
-border-top: 3px solid #cc5200;
+padding: 1rem 0;
+font-size: 0.9rem;
+margin-top: 3rem;
+border-top: 1px solid #ff6f3c;
 }
 
-/* Responsive tweaks */
-@media (max-width: 480px) {
-header h1 {
-font-size: 2.8rem;
-padding: 0.6rem 1rem;
-}
+/* Responsive smaller fonts */
+@media(max-width: 480px) {
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.5rem; }
 nav {
-gap: 1.5rem;
+flex-direction: column;
+gap: 1rem;
 }
-section h2 {
-font-size: 2.2rem;
-}
-.gallery img {
-height: 140px;
+ul.rules-list li {
+font-size: 1rem;
 }
 }
 </style>
-
 </head>
 <body>
 
 <header>
-<h1>Heldorya Minecraft Server</h1>
+<h1>Welcome to Heldorya - The Modded Minecraft Realm</h1>
+<p>Your medieval adventure begins here</p>
 </header>
 
 <nav>
-<a href="#welcome">Welcome</a>
-<a href="#info">Info</a>
-<a href="#rules">Rules</a>
-<a href="#explore">Explore</a>
+<a href="#rules">Rules of the Land</a>
+<a href="#explore">Explore the World</a>
 <a href="#protection">Protection</a>
+<a href="#contacts">Contacts</a>
 </nav>
 
 <main>
 
-<section id="welcome" class="intro-text">
-<p>Welcome to Heldorya — a realm where legends are born and heroes unite. Begin your epic journey in the grandeur of Castello di Valdareth.</p>
+<!-- Intro with Castle -->
+<section id="castle-intro">
+<img src="https://i.imgur.com/2rIob1Q.jpeg" alt="Castello di Valdareth" />
+<h2>The Mighty Castello di Valdareth</h2>
+<p class="intro-text">Behold the ancient Castello di Valdareth, heart of Heldorya. A fortress steeped in history, ready to shelter brave souls and grand builders.</p>
 </section>
 
-<section id="info" class="intro-text">
-<p>Heldorya runs Forge 1.20.1 with exclusive mods, delivering a medieval fantasy experience rich with adventure. Contact admins to receive the modpack and step into a world of endless possibilities.</p>
-</section>
-
+<!-- Rules Section -->
 <section id="rules">
-<h2>Laws of the Land</h2>
+<h2>Rules of the Land</h2>
 <ul class="rules-list">
-<li>No griefing or destruction of other players’ builds.</li>
-<li>Respect all players and admins. Harassment is forbidden.</li>
-<li>Cheating, hacking, or exploits lead to instant ban.</li>
-<li>Use respectful and appropriate language at all times.</li>
-<li>Trading must be fair and honest.</li>
-<li>Do not abuse bugs or glitches.</li>
-<li>Follow instructions from events and admins without disputes.</li>
+<li>Respect the community and fellow players. Harassment or hate speech will not be tolerated.</li>
+<li>Griefing and stealing are strictly forbidden. Offenders will face confinement in the castle’s subterranean cells.</li>
+<li>Use of hacks, cheats, or any unfair advantage is prohibited.</li>
+<li>Respect the modded content and do not attempt to break or exploit game mechanics.</li>
+<li>To join, please contact the admins for the modpack download and whitelist access.</li>
+<li>Donations are optional and never required for gameplay advantages.</li>
 </ul>
 </section>
 
+<!-- Explore Section with all 15 photos -->
 <section id="explore">
 <h2>Explore the World</h2>
-<p class="intro-text">Build your legacy among towering castles, lively markets, and sacred churches. Buy your home in the spawn village and become part of the kingdom’s heart.</p>
+<p class="intro-text">
+Journey through the castle halls, lively market squares, sacred churches, and the bustling spawn village. Buy your own home, trade in the grand market, or borrow trusty steeds from the castle stables. The realm is yours to discover.
+</p>
 
 <div class="gallery">
 
 <figure>
+<img src="https://i.imgur.com/DXAthtg.jpeg" alt="Lobby in Castello di Valdareth" />
+<figcaption><strong>Lobby of Castello di Valdareth:</strong> Where heroes spawn and their quests begin, embraced by towering walls and flickering torches.</figcaption>
+</figure>
+
+<figure>
+<img src="https://i.imgur.com/fexZRmv.jpeg" alt="Portale del Grande Corvo" />
+<figcaption><strong>Portale del Grande Corvo:</strong> A mystical gateway glowing with arcane power, leading to unknown realms beyond.</figcaption>
+</figure>
+
+<figure>
+<img src="https://i.imgur.com/JNnVeK3.jpeg" alt="Sala del Trono / Sala Comune" />
+<figcaption><strong>Throne Hall:</strong> The grand hall where lords and ladies convene, echoing with tales of glory and intrigue.</figcaption>
+</figure>
+
+<figure>
 <img src="https://i.imgur.com/2rIob1Q.jpeg" alt="Castello di Valdareth" />
-<figcaption>Castello di Valdareth - The Kingdom’s Heart</figcaption>
+<figcaption><strong>Castello di Valdareth Exterior:</strong> The fortress standing firm against time and foes alike.</figcaption>
 </figure>
 
 <figure>
-<img src="https://i.imgur.com/9bR29sG.jpg" alt="Spawn Medieval Village" />
-<figcaption>Spawn Medieval Village</figcaption>
+<img src="https://i.imgur.com/Ue3PNQA.jpeg" alt="Sotterranei vicino all'Ufficio delle Guardie" />
+<figcaption><strong>Castle Subterranei:</strong> Shadowed corridors beneath the castle where guards keep watch and prisoners are held.</figcaption>
 </figure>
 
 <figure>
-<img src="https://i.imgur.com/kPUY2J0.jpg" alt="Tower Overlooking the Valley" />
-<figcaption>Tower Overlooking the Valley</figcaption>
+<img src="https://i.imgur.com/PFmqahT.jpeg" alt="Casa in legno nel Villaggio" />
+<figcaption><strong>Village Wooden House:</strong> Cozy abodes nestled in the spawn village, perfect for new settlers.</figcaption>
 </figure>
 
 <figure>
-<img src="https://i.imgur.com/Y2pbjXD.jpg" alt="Secret Forest Entrance" />
-<figcaption>Secret Forest Entrance</figcaption>
+<img src="https://i.imgur.com/6luECAV.jpeg" alt="Chiesa nel Villaggio" />
+<figcaption><strong>Village Church:</strong> A serene place of worship and gathering for the folk of Heldorya.</figcaption>
 </figure>
 
 <figure>
-<img src="https://i.imgur.com/q3pzCT7.jpg" alt="Marketplace at Dusk" />
-<figcaption>Marketplace at Dusk</figcaption>
+<img src="https://i.imgur.com/Am70xb5.jpeg" alt="Case al Ponte" />
+<figcaption><strong>Bridge Houses:</strong> Quaint homes lining the ancient bridge, alive with commerce and chatter.</figcaption>
 </figure>
 
 <figure>
-<img src="https://i.imgur.com/4PhG4DP.jpg" alt="Medieval Hub Interior" />
-<figcaption>Medieval Hub Interior</figcaption>
+<img src="https://i.imgur.com/5FVqxgh.jpeg" alt="Laboratorio di Incantesimi" />
+<figcaption><strong>Enchantment Workshop:</strong> Where arcane arts empower your weapons and armor.</figcaption>
 </figure>
 
 <figure>
-<img src="https://i.imgur.com/D9DxiQc.jpg" alt="Dragon's Lair" />
-<figcaption>Dragon's Lair</figcaption>
+<img src="https://i.imgur.com/rbLRUYa.jpeg" alt="Piazza del Mercato" />
+<figcaption><strong>Market Square:</strong> The heart of trade and camaraderie, alive with colorful stalls and lively haggling.</figcaption>
 </figure>
 
 <figure>
-<img src="https://i.imgur.com/PE27u6S.jpg" alt="Enchanted Garden" />
-<figcaption>Enchanted Garden</figcaption>
+<img src="https://i.imgur.com/Qj1fUcf.jpeg" alt="Stalle del Castello" />
+<figcaption><strong>Castle Stables:</strong> Home to noble steeds ready to bear you on grand journeys.</figcaption>
 </figure>
 
 <figure>
-<img src="https://i.imgur.com/vGZv6Sb.jpg" alt="Cobbled Stone Streets" />
-<figcaption>Cobbled Stone Streets</figcaption>
+<img src="https://i.imgur.com/3CZFWrj.jpeg" alt="Corridoi interni del Castello" />
+<figcaption><strong>Castle Corridors:</strong> Winding paths echoing footsteps of knights and secrets whispered.</figcaption>
 </figure>
 
 <figure>
-<img src="https://i.imgur.com/OJrkQZk.jpg" alt="Ancient Library" />
-<figcaption>Ancient Library</figcaption>
+<img src="https://i.imgur.com/kHKmZzJ.jpeg" alt="Villaggio nei pressi dello Spawn" />
+<figcaption><strong>Spawn Village:</strong> Welcoming new adventurers with open arms and humble homes.</figcaption>
 </figure>
 
 <figure>
-<img src="https://i.imgur.com/7GYLcah.jpg" alt="Hidden Dungeon Entrance" />
-<figcaption>Hidden Dungeon Entrance</figcaption>
+<img src="https://i.imgur.com/XL1Y6H4.jpeg" alt="Labirinto nella Foresta" />
+<figcaption><strong>Forest Labyrinth:</strong> A twisting maze of ancient trees and hidden treasures for the brave.</figcaption>
 </figure>
 
 <figure>
-<img src="https://i.imgur.com/Yrl1Ycg.jpg" alt="Riverside Dock" />
-<figcaption>Riverside Dock</figcaption>
-</figure>
-
-<figure>
-<img src="https://i.imgur.com/R4RFe2n.jpg" alt="Snowy Mountain Pass" />
-<figcaption>Snowy Mountain Pass</figcaption>
-</figure>
-
-<figure>
-<img src="https://i.imgur.com/vnP6d2S.jpg" alt="Forge & Blacksmith" />
-<figcaption>Forge & Blacksmith</figcaption>
-</figure>
-
-<figure>
-<img src="https://i.imgur.com/2DxFkC1.jpg" alt="Village Festival" />
-<figcaption>Village Festival</figcaption>
+<img src="https://i.imgur.com/xz3AKJf.jpeg" alt="Piccolo Spawn Hub" />
+<figcaption><strong>Spawn Hub:</strong> The bustling crossroads where adventurers meet, trade, and prepare for quests ahead.</figcaption>
 </figure>
 
 </div>
 </section>
 
-<section id="protection" class="protection-text">
-<p>Players are protected from griefing, theft, and harassment through active moderation and anti-cheat measures. Build in peace and enjoy your adventure!</p>
+<!-- Protection Section -->
+<section id="protection">
+<h2>Protection & Safety</h2>
+<p class="intro-text">
+Your creations and treasures deserve the strongest protections. Utilize our region guards and trusted mods to safeguard your homes and belongings from griefers and intruders.
+The castle guards stand vigilant to maintain peace and order across Heldorya.
+</p>
+</section>
+
+<!-- Contact Section -->
+<section id="contacts">
+<h2>Contact the Admins</h2>
+<p class="intro-text">
+To join Heldorya, request the modpack, or report any issues, please reach out to our admins:
+</p>
+<ul class="rules-list" style="max-width: 400px; margin: 0 auto;">
+<li><strong>Email:</strong> <a href="mailto:heldorya.admins@gmail.com">heldorya.admins@gmail.com</a></li>
+<li><strong>Discord:</strong> <a href="https://discord.gg/heldorya" target="_blank" rel="noopener noreferrer">discord.gg/heldorya</a></li>
+<li><strong>IP Server:</strong> moddedw0rld.bh-games.com</li>
+</ul>
 </section>
 
 </main>
 
 <footer>
-&copy; 2025 Heldorya Minecraft Server — All Rights Reserved
+&copy; 2025 Heldorya Minecraft Server. All rights reserved.
 </footer>
 
 </body>
